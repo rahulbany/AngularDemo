@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row top-mar">
     <div class="col-lg-8 col-lg-offset-2">
         <div class="done">
             <div class="alert alert-success">
@@ -7,75 +7,75 @@
             </div>
         </div>
         <form class="pt-4" role="form" [formGroup]="contactUsForm" novalidate (ngSubmit)="onSubmit()">
-            <div
-              [ngClass]="{'has-error':contactUsForm.get('first_name').invalid && (contactUsForm.get('first_name').dirty || contactUsForm.get('first_name').touched)}">
+            <div class=""
+              [ngClass]="{'has-error':contactUsForm.get('first_name')?.invalid && (contactUsForm.get('first_name')?.dirty || contactUsForm.get('first_name')?.touched)}">
               <div *ngFor="let validation of account_validation_messages.first_name">
                 <span class="help-block"
-                  *ngIf="contactUsForm.get('first_name').hasError(validation.type) && (contactUsForm.get('first_name').dirty || contactUsForm.get('first_name').touched)">{{validation.message}}
+                  *ngIf="contactUsForm.get('first_name')?.hasError(validation.type) && (contactUsForm.get('first_name')?.dirty || contactUsForm.get('first_name')?.touched)">{{validation.message}}
                 </span>
               </div>
-              <input type="text" class="form-control" placeholder="What can we help you with?" type="text"
+              <input type="text" class="form-control" placeholder="First Name" type="text"
                 formControlName="first_name" class="form-control" />
             </div>
             <div
-              [ngClass]="{'has-error':contactUsForm.get('last_name').invalid && (contactUsForm.get('last_name').dirty || contactUsForm.get('last_name').touched)}">
+              [ngClass]="{'has-error':contactUsForm.get('last_name')?.invalid && (contactUsForm.get('last_name')?.dirty || contactUsForm.get('last_name')?.touched)}">
               <div *ngFor="let validation of account_validation_messages.last_name">
                 <span class="help-block"
-                  *ngIf="contactUsForm.get('last_name').hasError(validation.type) && (contactUsForm.get('last_name').dirty || contactUsForm.get('last_name').touched)">{{validation.message}}
+                  *ngIf="contactUsForm.get('last_name')?.hasError(validation.type) && (contactUsForm.get('last_name')?.dirty || contactUsForm.get('last_name')?.touched)">{{validation.message}}
                 </span>
               </div>
-              <input type="text" class="form-control" placeholder="What can we help you with?" 
+              <input type="text" class="form-control" placeholder="Last Name" 
                 formControlName="last_name" class="form-control" />
             </div>
             <div
-            [ngClass]="{'has-error':contactUsForm.get('email').invalid && (contactUsForm.get('email').dirty || contactUsForm.get('email').touched)}">
+            [ngClass]="{'has-error':contactUsForm.get('email')?.invalid && (contactUsForm.get('email')?.dirty || contactUsForm.get('email')?.touched)}">
             <div *ngFor="let validation of account_validation_messages.email">
               <span class="help-block"
-                *ngIf="contactUsForm.get('email').hasError(validation.type) && (contactUsForm.get('email').dirty || contactUsForm.get('email').touched)">{{validation.message}}
+                *ngIf="contactUsForm.get('email')?.hasError(validation.type) && (contactUsForm.get('email')?.dirty || contactUsForm.get('email')?.touched)">{{validation.message}}
               </span>
             </div>
-            <input type="email" class="form-control" placeholder="What can we help you with?" 
+            <input type="email" class="form-control" placeholder="Email" 
               formControlName="email" class="form-control" />
           </div>
           <div
-            [ngClass]="{'has-error':contactUsForm.get('phone').invalid && (contactUsForm.get('phone').dirty || contactUsForm.get('phone').touched)}">
+            [ngClass]="{'has-error':contactUsForm.get('phone')?.invalid && (contactUsForm.get('phone')?.dirty || contactUsForm.get('phone')?.touched)}">
             <div *ngFor="let validation of account_validation_messages.phone">
               <span class="help-block"
-                *ngIf="contactUsForm.get('phone').hasError(validation.type) && (contactUsForm.get('phone').dirty || contactUsForm.get('phone').touched)">{{validation.message}}
+                *ngIf="contactUsForm.get('phone')?.hasError(validation.type) && (contactUsForm.get('phone')?.dirty || contactUsForm.get('phone')?.touched)">{{validation.message}}
               </span>
             </div>
-            <input type="text" class="form-control" placeholder="What can we help you with?" 
+            <input type="text" class="form-control" placeholder="Phone" 
               formControlName="phone" class="form-control" />
           </div>
           <div
-          [ngClass]="{'has-error':contactUsForm.get('organization').invalid && (contactUsForm.get('organization').dirty || contactUsForm.get('organization').touched)}">
+          [ngClass]="{'has-error':contactUsForm.get('organization')?.invalid && (contactUsForm.get('organization')?.dirty || contactUsForm.get('organization')?.touched)}">
           <div *ngFor="let validation of account_validation_messages.organization">
             <span class="help-block"
-              *ngIf="contactUsForm.get('organization').hasError(validation.type) && (contactUsForm.get('organization').dirty || contactUsForm.get('organization').touched)">{{validation.message}}
+              *ngIf="contactUsForm.get('organization')?.hasError(validation.type) && (contactUsForm.get('organization')?.dirty || contactUsForm.get('organization')?.touched)">{{validation.message}}
             </span>
           </div>
-          <input type="text" class="form-control" placeholder="What can we help you with?" 
+          <input type="text" class="form-control" placeholder="Organization" 
             formControlName="organization" class="form-control" />
         </div>
 
         <div
-        [ngClass]="{'has-error':contactUsForm.get('designation').invalid && (contactUsForm.get('designation').dirty || contactUsForm.get('organization').touched)}">
+        [ngClass]="{'has-error':contactUsForm.get('designation')?.invalid && (contactUsForm.get('designation')?.dirty || contactUsForm.get('organization')?.touched)}">
         <div *ngFor="let validation of account_validation_messages.designation">
           <span class="help-block"
-            *ngIf="contactUsForm.get('designation').hasError(validation.type) && (contactUsForm.get('designation').dirty || contactUsForm.get('organization').touched)">{{validation.message}}
+            *ngIf="contactUsForm.get('designation')?.hasError(validation.type) && (contactUsForm.get('designation')?.dirty || contactUsForm.get('organization')?.touched)">{{validation.message}}
           </span>
         </div>
-        <input type="text" class="form-control" placeholder="What can we help you with?" 
+        <input type="text" class="form-control" placeholder="Designation" 
           formControlName="designation" class="form-control" />
       </div>
       <div
-      [ngClass]="{'has-error':contactUsForm.get('salary').invalid && (contactUsForm.get('salary').dirty || contactUsForm.get('organization').touched)}">
+      [ngClass]="{'has-error':contactUsForm.get('salary')?.invalid && (contactUsForm.get('salary')?.dirty || contactUsForm.get('organization')?.touched)}">
       <div *ngFor="let validation of account_validation_messages.salary">
         <span class="help-block"
-          *ngIf="contactUsForm.get('salary').hasError(validation.type) && (contactUsForm.get('salary').dirty || contactUsForm.get('organization').touched)">{{validation.message}}
+          *ngIf="contactUsForm.get('salary')?.hasError(validation.type) && (contactUsForm.get('salary')?.dirty || contactUsForm.get('organization')?.touched)">{{validation.message}}
         </span>
       </div>
-      <input type="text" class="form-control" placeholder="What can we help you with?" 
+      <input type="text" class="form-control" placeholder="Salary" 
         formControlName="salary" class="form-control" />
     </div>
             <input type="submit" class="btn-primary" value='Send Message' />

@@ -12,9 +12,9 @@ export class  DataService {
   /**
    * Get Drivers Data.
    */
-  getBlogs(): Observable<any> {
-    console.log('lllllllllllllll')
-    return this.http.get(`${environment.base_url}employees`);
+  getBlogs(data): Observable<any> {
+    console.log('lllllllllllllll');
+    return this.http.post(`${environment.base_url}employees`, data);
   }
   // getBlogsById(id): Observable<any> {
   //   return this.http.get(`${environment.base_url}getblogsbyid/${id}`);
